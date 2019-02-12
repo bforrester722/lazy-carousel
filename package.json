@@ -1,0 +1,34 @@
+{
+  "name": "@spriteful/lazy-carousel",
+  "version": "1.0.0",
+  "description": "Self lazy-loading images carousel",
+  "main": "lazy-carousel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spriteful/lazy-carousel.git"
+  },
+  "author": "Spriteful spritefuldev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spriteful/lazy-carousel/issues"
+  },
+  "homepage": "https://github.com/spriteful/lazy-carousel#readme",
+  "dependencies": {
+    "@polymer/iron-image": "^3.0.1",
+    "@polymer/polymer": "^3.1.0",
+    "@spriteful/app-carousel": "^1.0.0",
+    "@spriteful/responsive-image": "^1.0.0",
+    "@spriteful/spriteful-element": "^1.0.4"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.2",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wct-mocha": "^1.0.0"
+  }
+}
