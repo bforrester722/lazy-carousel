@@ -1,0 +1,71 @@
+
+<style>
+  
+  :host {
+    display:         flex;
+    justify-content: center;
+    overflow-x:      hidden;
+    overflow-y:      hidden;
+    --carousel-image-border-radius: 0px;
+  }
+
+  app-carousel {
+    width:  										var(--carousel-width,  100%);
+    height: 										var(--carousel-height, 256px);
+    --carousel-overflow-x: 			var(--carousel-overflow-x, hidden);
+    --carousel-overflow-y: 			var(--carousel-overflow-y, hidden);
+    --container-pointer-events: none;
+  }
+ 
+  .wrapper {
+    display:         flex;
+    justify-content: center;
+    overflow-y:      var(--carousel-overflow-y, hidden);
+    overflow-x:      var(--carousel-overflow-x, hidden);
+  }
+
+  .imgs {
+    background-color: var(--iron-image-background-color, var(--app-background-color, grey));
+    width:            var(--image-width, 100%);
+    overflow-x:       hidden;
+    overflow-y:       visible;
+    pointer-events:   auto;
+    border-radius:    var(--carousel-image-border-radius);
+  }
+
+</style>
+
+
+<app-carousel id="carousel" 
+              auto-play="[[autoPlay]]"  
+              visible-images=[[_numOfImages]] 
+              flip-time="[[flipTime]]"
+              nav="[[nav]]"
+              decay="[[decay]]"
+              dots="[[dots]]"
+              over-scroll="[[overScroll]]">
+  <template id="carouselTemplate" 
+            is="dom-repeat" 
+            items="[[_lazyImages]]" 
+            as="image">
+    <div class="wrapper" on-click="__carouselClicked">
+      <template is="dom-if" if="[[!_typeIsIronImage]]">
+        <responsive-image class="imgs"
+                          sizing="[[sizing]]" 
+                          disable-auto-sizing 
+                          responsive="[[image]]" 
+                          alt="[[alt]]">
+        </responsive-image>
+      </template>
+      <template is="dom-if" if="[[_typeIsIronImage]]">
+        <iron-image class="imgs"
+                    sizing="[[sizing]]" 
+                    src="[[image]]"
+                    fade
+                    preload
+                    alt="[[alt]]">
+        </iron-image>
+      </template>
+    </div>
+  </template>
+</app-carousel>
