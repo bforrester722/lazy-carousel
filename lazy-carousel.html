@@ -7,13 +7,16 @@
     overflow-x:      hidden;
     overflow-y:      hidden;
     --carousel-image-border-radius: 0px;
+    /* these are pass through values, must be different strings to work */
+    --lazy-carousel-overflow-x: var(--carousel-overflow-x); 
+    --lazy-carousel-overflow-y: var(--carousel-overflow-y);
   }
 
   app-carousel {
-    width:  										var(--carousel-width,  100%);
-    height: 										var(--carousel-height, 256px);
-    --carousel-overflow-x: 			var(--carousel-overflow-x, hidden);
-    --carousel-overflow-y: 			var(--carousel-overflow-y, hidden);
+    width:                      var(--carousel-width,  100%);
+    height:                     var(--carousel-height, 256px);
+    --carousel-overflow-x:      var(--lazy-carousel-overflow-x, hidden);
+    --carousel-overflow-y:      var(--lazy-carousel-overflow-y, hidden);
     --container-pointer-events: none;
   }
  
