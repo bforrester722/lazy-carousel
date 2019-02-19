@@ -1,6 +1,6 @@
 {
   "name": "@spriteful/lazy-carousel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Self lazy-loading images carousel",
   "main": "lazy-carousel.js",
   "scripts": {
