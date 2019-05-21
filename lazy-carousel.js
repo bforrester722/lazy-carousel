@@ -181,9 +181,16 @@ class SpritefulLazyCarousel extends SpritefulElement {
   }
 
 
-  __numOfImagesChanged(num, images) {
-    if (!num || !images) { return; } 
-    this.__setupCarousel(num, images);
+  async __numOfImagesChanged(num, images) {
+    try {
+      await this.debounce('num-of-images-debounce', 50);
+      if (!num || !images) { return; } 
+      this.__setupCarousel(num, images);
+    }
+    catch (error) {
+      if (error === 'debounced') { return; }
+      console.error(error);
+    }
   }
 
   // sets up carousel num of images wait for lighthouse
