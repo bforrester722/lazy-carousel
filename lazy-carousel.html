@@ -56,14 +56,14 @@
         <responsive-image class="imgs"
                           sizing="[[sizing]]" 
                           disable-auto-sizing 
-                          responsive="[[image]]" 
+                          responsive="[[__computeSrc(image)]]" 
                           alt="[[alt]]">
         </responsive-image>
       </template>
       <template is="dom-if" if="[[_typeIsIronImage]]">
         <iron-image class="imgs"
                     sizing="[[sizing]]" 
-                    src="[[image]]"
+                    src="[[__computeSrc(image)]]"
                     fade
                     preload
                     alt="[[alt]]">
