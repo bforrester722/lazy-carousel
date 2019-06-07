@@ -51,7 +51,9 @@
             is="dom-repeat" 
             items="[[_lazyImages]]" 
             as="image">
-    <div class="wrapper" on-click="__carouselClicked">
+    <div class="wrapper" 
+         on-click="__carouselClicked" 
+         on-down="__loadAllImages">
       <template is="dom-if" if="[[!_typeIsIronImage]]">
         <responsive-image class="imgs"
                           sizing="[[sizing]]" 
