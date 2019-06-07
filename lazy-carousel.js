@@ -222,6 +222,7 @@ class SpritefulLazyCarousel extends SpritefulElement {
 
   // loads all images when user interacts with carousel
   __loadAllImages() {
+    if (this._lazyImages === this.images) { return; }
     this._lazyImages = this.images;
   }
 
