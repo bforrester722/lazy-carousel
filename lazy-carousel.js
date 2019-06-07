@@ -220,6 +220,11 @@ class SpritefulLazyCarousel extends SpritefulElement {
     this.__listenForInitialImagesToLoad(numOfImages);
   }
 
+  // loads all images when user interacts with carousel
+  __loadAllImages() {
+    this._lazyImages = this.images;
+  }
+
   // Called from outside to move to section on re-opening same 
   moveToSection(index) {
     this.$.carousel.moveToSection(index);
