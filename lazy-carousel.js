@@ -111,7 +111,7 @@ class SpritefulLazyCarousel extends SpritefulElement {
     const {optimized, url, src} = image;
     return optimized || url || src;
   }
-
+  
   
   async __carouselClicked(event) {
     try {
