@@ -102,13 +102,16 @@ class SpritefulLazyCarousel extends SpritefulElement {
   __computeTypeIsIronImage(type) {
     return type === 'iron-image';
   }
+  
 
   __computeSrc(image) {
     if (typeof image === 'string') {
       return image;
     }
-    return image.url || image.src;
+    const {optimized, url, src} = image;
+    return optimized || url || src;
   }
+
   
   async __carouselClicked(event) {
     try {
