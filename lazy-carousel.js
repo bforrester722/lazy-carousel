@@ -122,7 +122,13 @@ class SpritefulLazyCarousel extends SpritefulElement {
       if (error === 'click debounced') { return; }
       console.error(error); 
     } 
+  } 
+  
+  async connectedCallback() {
+    super.connectedCallback();
+    listen(this,      'app-carousel-nav-clicked',     this.__loadAllImages.bind(this));
   }
+
 
   // Sets breakpoints at pix sets in calling element
   __breakPointsChanged(breakpoints, images) {
