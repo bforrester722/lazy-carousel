@@ -1,6 +1,6 @@
 {
   "name": "@spriteful/lazy-carousel",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Self lazy-loading images carousel",
   "main": "lazy-carousel.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "dependencies": {
     "@polymer/iron-image": "^3.0.2",
     "@polymer/polymer": "^3.3.0",
-    "@spriteful/app-carousel": "^1.0.1",
+    "@spriteful/app-carousel": "^1.0.3",
     "@spriteful/responsive-image": "^1.0.3",
     "@spriteful/spriteful-element": "^1.0.4"
   },
